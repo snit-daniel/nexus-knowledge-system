@@ -13640,17 +13640,11 @@ async def health_check():
 
 if __name__ == "__main__":
     import uvicorn
-    print("\n🎯 COMPLETE PROFESSIONAL RAG SYSTEM STARTING...")
-    print("Open: http://localhost:8000")
-    print("✅ ALL PROFESSIONAL FEATURES ACTIVATED:")
-    print("   🏆 Professional document processing with specialized loaders")
-    print("   🏆 Multi-sheet Excel support with structured formatting") 
-    print("   🏆 Professional PDF extraction using PyPDFLoader")
-    print("   🏆 Intelligent chunking system")
-    print("   🏆 Hybrid search (vector + BM25)")
-    print("   🏆 Query enhancement")
-    print("   🏆 Professional Google Drive integration")
-    print("   🏆 Complete frontend with all endpoints")
-    print("   🏆 Corporate access control")
-    print("   🏆 Chat history management")
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
+    import os  # ← ADD THIS LINE
+    
+
+    
+    port = int(os.environ.get("PORT", 8000))  # ← CHANGE THIS LINE
+    print(f"🌐 Starting server on port: {port}")
+    
+    uvicorn.run(app, host="0.0.0.0", port=port, log_level="info")
