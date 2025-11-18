@@ -1,0 +1,30 @@
+# Virtual environments
+.venv*/
+venv*/
+env*/
+
+# ChromaDB
+chroma_db/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment files
+.env
+.env.local
+
+# Data directories
+structured_data/
+original_files/
+sync_state/
+vector_store/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

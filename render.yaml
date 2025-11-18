@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: professional-rag-system
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn bionic_fixed:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.7
+      - key: DEEPSEEK_API_KEY
+        value: sk-72385ab6d41845058899aabb4be43f32
